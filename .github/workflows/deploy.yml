@@ -33,8 +33,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npx vite build
+           - name: Build
+        run: |
+          npx tsc --noEmit || true
+          npx vite build
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
