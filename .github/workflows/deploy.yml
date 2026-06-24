@@ -28,16 +28,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
-           - name: Build
+      - name: Set base path
         run: |
-          npx tsc --noEmit || true
-          npx vite build
+          REPO="${{ github.repository }}"
+          REPO_NAME="${REPO#*/}"
+          echo "BASE_PATH=/$REPO_NAME/" >> $GITHUB_ENV
 
+      - name: Build
+        run: npx vite build --base $BASE_PATH
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
