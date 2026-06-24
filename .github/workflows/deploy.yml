@@ -32,14 +32,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set base path
-        run: |
-          REPO="${{ github.repository }}"
-          REPO_NAME="${REPO#*/}"
-          echo "BASE_PATH=/$REPO_NAME/" >> $GITHUB_ENV
-
       - name: Build
-        run: npx vite build --base $BASE_PATH
+        run: npx vite build --base /maja-art-studio/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
