@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="blend"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="url(#bg)" />
+
+  <!-- Subtle grain overlay -->
+  <rect width="600" height="800" fill="#0a0a0a" opacity="0.3" filter="url(#noise)" />
+
+  <!-- Top decorative line -->
+  <rect x="60" y="60" width="480" height="1" fill="url(#line)" />
+
+  <!-- Category indicator -->
+  <rect x="60" y="80" width="40" height="2" fill="#ffffff" opacity="0.6" />
+  <text x="110" y="85" font-family="sans-serif" font-size="10" fill="#ffffff" opacity="0.6" letter-spacing="4" text-transform="uppercase">
+    FILM
+  </text>
+
+  <!-- Main title - Chinese -->
+  <text x="300" y="380" font-family="sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="8">
+    戏台
+  </text>
+  
+
+  <!-- Divider -->
+  <rect x="240" y="440" width="120" height="1" fill="#ffffff" opacity="0.3" />
+
+  <!-- English title -->
+  <text x="300" y="475" font-family="sans-serif" font-size="12" fill="#888888" text-anchor="middle" letter-spacing="3" text-transform="uppercase">
+    The Stage
+  </text>
+
+  <!-- Featured badge -->
+  
+
+  <!-- Bottom decorative elements -->
+  <rect x="60" y="700" width="480" height="1" fill="url(#line)" />
+
+  <!-- Corner accents -->
+  <rect x="60" y="55" width="12" height="1" fill="#ffffff" opacity="0.4" />
+  <rect x="55" y="60" width="1" height="12" fill="#ffffff" opacity="0.4" />
+  <rect x="528" y="55" width="12" height="1" fill="#ffffff" opacity="0.4" />
+  <rect x="544" y="60" width="1" height="12" fill="#ffffff" opacity="0.4" />
+  <rect x="60" y="705" width="12" height="1" fill="#ffffff" opacity="0.4" />
+  <rect x="55" y="700" width="1" height="12" fill="#ffffff" opacity="0.4" />
+  <rect x="528" y="705" width="12" height="1" fill="#ffffff" opacity="0.4" />
+  <rect x="544" y="700" width="1" height="12" fill="#ffffff" opacity="0.4" />
+</svg>
